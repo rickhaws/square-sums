@@ -28,6 +28,7 @@ function sieve(pairs, sequence) {
   
   // Base case -- all numbers are in the sequence
   if (pairs.size === 0) {
+//       /* */ console.log("****  ", JSON.stringify(sequence))
     return [...sequence];
   }
   
@@ -54,7 +55,7 @@ function sieve(pairs, sequence) {
     let newSequence = sieve(pairs, sequence);
     if (newSequence) {
       solution = newSequence;
-      break; // comment this line to find all solutions
+     break; // comment this line to find all solutions
     }
 
     sequence.pop();
